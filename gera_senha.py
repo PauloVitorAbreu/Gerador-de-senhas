@@ -16,16 +16,16 @@ def cria_senha (comprimento_senha, caracter_esp, caps):
         pega_letra = alfabeto[escolhe_posicao]
         
         if caps == True:
-            sorteia = r.randint(0,3)
-            if sorteia/2 != 0:
+            sorteia = r.randint(1,2)
+            if sorteia%2 != 0:
                 pega_letra = pega_letra.upper()
                 senha += pega_letra 
             else:
                 senha += pega_letra 
 
         if caracter_esp == True:
-            sorteia_2 = r.randint(0,3)
-            if sorteia_2/2 == 0:
+            sorteia_2 = r.randint(1,2)
+            if sorteia_2%2 == 0:
                 pos_esp = r.randint(0,28)
                 pega_esp = lista_esp[pos_esp]
                 senha += pega_esp
